@@ -11,7 +11,7 @@ for n in range(0, N):
   max_upper_bound = 0
 
   for i in range(0, d):
-    if (numbers_of_selections[i] > 0):
+    if(numbers_of_selections[i] > 0):
       average_reward = sums_of_rewards[i] / numbers_of_selections[i]
       delta_i = math.sqrt(3/2 * math.log(n + 1) / numbers_of_selections[i])
       upper_bound = average_reward + delta_i
@@ -21,8 +21,8 @@ for n in range(0, N):
       max_upper_bound = upper_bound
       ad = i
 
-  ads_selected.append(ad)
-  numbers_of_selections[ad] = numbers_of_selections[ad] + 1
-  reward = dataset.values[n, ad]
-  sums_of_rewards[ad] = sums_of_rewards[ad] + reward
-  total_reward = total_reward + reward
+ads_selected.append(ad)
+numbers_of_selections[ad] = numbers_of_selections[ad] + 1
+reward = data.values[n, ad]
+sums_of_rewards[ad] = sums_of_rewards[ad] + reward
+total_reward = total_reward + reward
